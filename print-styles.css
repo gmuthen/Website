@@ -1,0 +1,26 @@
+body {
+    background-color: #fff;
+    /* White background color for printing */
+    color: #000 !important;
+    /* Black text color for printing (use !important to override any existing styles) */
+    max-width: 100%;
+    /* Use full width for printing */
+}
+
+header {
+    background-color: #fff;
+    /* White background for header during printing */
+    color: #000 !important;
+    /* Black text color for header during printing */
+}
+
+section,
+button {
+    page-break-inside: avoid;
+    /* Avoid breaking sections and buttons across pages */
+}
+
+#printButton {
+    display: none;
+    /* Hide the button on print styles */
+}

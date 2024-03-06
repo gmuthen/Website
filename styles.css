@@ -1,0 +1,72 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px auto; /* Center the content by setting auto margins */
+    padding: 20px;
+    background-color: #000; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: justify; /* Justify the text */
+    max-width: 800px; /* Set a maximum width for the content */
+}
+
+header {
+    text-align: center;
+    background-color: #3498db;
+    padding: 15px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #3498db;
+}
+
+.work-experience,
+.education,
+.skills {
+    margin-bottom: 20px;
+    background-color: #111; /* Darker background color */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.projects {
+    margin-bottom: 40px;
+    background-color: #111; /* Darker
+
+
+header {
+    text-align: center;
+    background-color: #3498db;
+    padding: 15px;
+    color: #fff;
+    border-radius: 8px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #3498db;
+}
+
+.work-experience,
+.education,
+.skills {
+    margin-bottom: 20px;
+    background-color: #111;
+    /* Darker background color */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.projects {
+    margin-bottom: 40px;
+    background-color: #111;
+    /* Darker
