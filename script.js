@@ -1,51 +1,40 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const button = document.getElementById('expandProjects');
-    const projectsSection = document.getElementById('projects');
+document.addEventListener('DOMContentLoaded', function() {
+    // Load Bootstrap JavaScript dynamically
+    const bootstrapScript = document.createElement('script');
+    
+    bootstrapScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js';
+    bootstrapScript.integrity = 'sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4';
+    bootstrapScript.crossOrigin = 'anonymous';
+    
+    document.head.appendChild(bootstrapScript);
 
-    button.addEventListener('click', function () {
-        projectsSection.classList.toggle('expanded');
-    });
-});
+    // Apply the user's preference from localStorage
+    const body = document.body;
+    const theme = localStorage.getItem('theme') || 'dark';
+    body.classList.add(theme + '-mode');
 
-document.addEventListener('DOMContentLoaded', function () {
-    const printButton = document.getElementById('printButton');
+    // Update icon based on current theme
+    const themeIcon = document.getElementById('themeIcon');
+    if (theme) {
+        themeIcon.classList.add(theme === 'dark' ? 'bi-sun' : 'bi-moon');
+    }
 
-    printButton.addEventListener('click', function () {
-        printResume();
-    });
-});
+    // Toggle dark mode
+    const toggleButton = document.getElementById('darkModeToggle');
+    if (toggleButton) {
+        toggleButton.addEventListener('click', function() {
+            // Toggle classes
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
 
-function printResume() {
-    window.print();
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Your existing code...
-
-    // New JavaScript functionality
-    const submitButton = document.getElementById('submitForm');
-    const submittedInfoDiv = document.getElementById('submittedInfo');
-    const contactForm = document.getElementById('contactForm');
-
-    submitButton.addEventListener('click', function () {
-        submitForm();
-    });
-
-    function submitForm() {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        if (name && email && message) {
-            const submittedInfo = `<p>Submitted Information:</p>
-                                   <p>Name: ${name}</p>
-                                   <p>Email: ${email}</p>
-                                   <p>Message: ${message}</p>`;
-
-            submittedInfoDiv.innerHTML = submittedInfo;
-            contactForm.reset();
-        } else {
-            alert('Please fill in all fields before submitting.');
-        }
+            // Update icon based on new theme
+            const newTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            themeIcon.classList.toggle('bi-moon');
+            themeIcon.classList.toggle('bi-sun');
+            console.log(`Theme switched to: ${newTheme}`); // Debugging
+        });
+    } else {
+        console.error('Dark mode toggle button not found'); // Debugging
     }
 });
