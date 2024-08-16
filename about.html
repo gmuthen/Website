@@ -1,29 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+			crossorigin="anonymous" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css"
+			integrity="sha384-sAjZvrYXacB9bJ0LVUOAvlGp7N5A9s6krO+1oZ2bSc1hG7q3UpoTU50kWYTKDOQC"
+			crossorigin="anonymous" />
+		<link href="styles.css" rel="stylesheet" />
+	</head>
+	<body class="dark-mode">
+		<!-- Navbar -->
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Gregory Muthen</a>
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarCollapse"
+					aria-controls="navbarCollapse"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav me-auto mb-2 mb-md-0">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="index.html">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="about.html">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="services.html">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Gregory Muthen - About</title>
-</head>
+		<main class="container flex-grow-1">
+			<div class="bg-light p-5 rounded">
+				<h1>Welcome to My Spot on the Web</h1>
+				<p>
+					Hello, I'm Gregory Muthen. I am an aspiring software engineer, having previously worked in the
+					telecommunications industry before finding my passion in technology. This is my first website.
+				</p>
+				<p>
+					When I'm not coding, you might find me working out, playing video games, or updating this website. I
+					have a keen interest in a wide range of technical topics, including programming languages,
+					databases, and network management.
+				</p>
+				<p>
+					In my personal life, I enjoy spending time with my wonderful partner. I also like to stay engaged
+					with my hobbies and interests outside of work, which includes tinkering with tech gadgets and
+					exploring new software development techniques.
+				</p>
+				<p>
+					This website is my space for self-expression and sharing my knowledge with the world. I cover
+					everything from personal thoughts to technical articles and open-source projects. I believe in
+					creating a space without ads, affiliate links, or tracking—just pure content aimed at inspiring and
+					helping others.
+				</p>
+				<p>
+					Feel free to explore my projects and articles, and I hope you find something that sparks your
+					interest. Join me in this journey.
+				</p>
+			</div>
+		</main>
 
-<body>
-    <!-- Your home page content -->
+		<!-- Footer -->
+		<footer class="bg-light text-center p-3 fixed-bottom">
+			<p class="mb-0">
+				&copy; 2024 Gregory Muthen
+				<button class="btn btn-secondary btn-sm" id="darkModeToggle" title="Toggle Dark Mode">
+					<i class="bi" id="themeIcon"></i>
+				</button>
+			</p>
+		</footer>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="resume.html">Resume</a>
-        <a href="about.html">About</a>
-        <!-- Add more navigation links as needed -->
-    </nav>
-    
-    <header>
-        <h1>Gregory Muthen</h1>
-        <p>IT Graduate</p>
-    </header>
-
-    <script src="script.js"></script>
-</body>
-
+		<script src="script.js"></script>
+	</body>
 </html>
